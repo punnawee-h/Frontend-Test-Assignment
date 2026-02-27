@@ -25,7 +25,7 @@ This project demonstrates strong fundamentals in HTML, CSS, and JavaScript with 
 - Smooth hover and transition effects
 
 ## Live Demo
-👉 [https://your-demo-link.com](https://punnawee.rf.gd/TestAssignment.html?i=1)
+👉 https://punnawee.rf.gd/TestAssignment.html?i=1
 
 ## Installation
 1. Clone the repository
