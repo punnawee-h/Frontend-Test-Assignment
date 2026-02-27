@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Frontend Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header จะถูก inject มาที่นี่ -->
+    <div id="header"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="images/mockup_video576.mp4" type="video/mp4">
+        </video>
+<div class="floating-text">
+    PLAIMANAS
+</div>
+        <div class="container hero-content">
+            <div class="text">
+                <h1></h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED IMAGE -->
+    <section class="featured featured-image">
+        <div class="container featured-content">
+            
+
+            <img src="images/img1.jpg" 
+                 alt="Featured Image" 
+                 class="featured-img">
+                 
+                 
+                 
+
+            <div class="featured-text">
+                <h2>Sed egestas, nibh a condimentum imperdiet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+<section class="video-section">
+
+    <div class="video-wrapper">
+        <video autoplay muted loop playsinline>
+            <source src="images/mockup_video576.mp4" type="video/mp4">
+        </video>
+        
+    </div>
+
+
+        <div class="featured-text">
+                <h2>Sed egestas, nibh a condimentum imperdiet</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+            </div>
+    
+
+</section>
+
+    
+<section class="media-section">
+  <div class="media-wrapper">
+
+    <!-- กล่องบน (รูป → hover เป็นวิดีโอ) -->
+    <div class="top-media">
+      <img src="images/collection1.jpg" class="main-img" alt="">
+      <video class="main-video" autoplay muted loop playsinline>
+    <source src="images/mockup_video576.mp4" type="video/mp4">
+</video>
+    </div>
+
+    <!-- กล่องล่าง -->
+    <div class="bottom-media">
+
+      <!-- ซ้ายล่าง -->
+      <div class="small-box">
+        <img src="images/collection2 (1).jpg" class="img-default" alt="">
+        <img src="images/collection2 (2).jpg" class="img-hover" alt="">
+      </div>
+
+      <!-- ขวาล่าง -->
+      <div class="small-box">
+        <img src="images/collect3.jpg" class="img-default" alt="">
+        <img src="images/collection2 (2).jpg" class="img-hover" alt="">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="marquee">
+    <div class="marquee-track">
+        <span>NEW ARRIVAL ⭠ BEST SELLING ⭢ NEW ARRIVAL ⭠ </span>
+        <span>BEST SELLING ⭢ NEW ARRIVAL ⭠ BEST SELLING ⭢ </span>
+    </div>
+</section>
+
+
+<section class="three-text">
+    <div class="three-container">
+
+        <div class="text-item">
+            <h3>Worldwide shipping</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+        </div>
+
+        <div class="text-item">
+            <h3>customer service</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+        </div>
+
+        <div class="text-item">
+            <h3>secure payment</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo, turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+        </div>
+
+    </div>
+</section>
+
+    
+    <section class="dark-section">
+
+    <div class="top-content">
+        <h2 id="mainTitle">FREQUENTLY ASKED QUESTIONS</h2>
+        <p id="mainDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo.</p>
+
+        <div class="button-group">
+    <button data-set="1">Orders</button>
+    <button data-set="2">Shipping</button>
+    <button data-set="3">Returns & Exchanges</button>
+    <button data-set="4">Sizing & Products</button>
+</div>
+
+<div class="accordion" id="accordion">
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span class="title">CAN I MODIFY OR CANCEL MY ORDER?</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="accordion-content">
+            "Orders can only be modified or canceled within 1 hour of purchase. After this time, we begin processing your order to ensure fast delivery."
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span class="title">WHAT PAYMENT METHODS DO YOU ACCEPT?</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="accordion-content">
+            "We accept major credit cards, debit cards, and selected online payment gateways. All transactions are securely processed."
+        </div>
+    </div>
+
+    <div class="accordion-item">
+        <div class="accordion-header">
+            <span class="title">WHY WAS MY ORDER CANCELLED?"</span>
+            <span class="arrow"></span>
+        </div>
+        <div class="accordion-content">
+            "Orders may be cancelled due to payment verification issues, stock availability, or incomplete information. You will be notified via email if this occurs." 
+        </div>
+    </div>
+</div>
+
+    </div>
+
+</section>
+
+
+<section class="form-section">
+
+    <!-- Radio -->
+
+
+    <div class="form-container">
+
+        <!-- ฝั่งซ้าย -->
+        <div class="form-left">
+            <h2>MAKE AN INQUIRY</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo.
+            </p>
+        </div>
+
+        <!-- ฝั่งขวา -->
+        <form class="form-right">
+                <div class="radio-group">
+        <label><input type="radio" name="type" checked> Onsite</label>
+        <label><input type="radio" name="type"> Hybrid</label>
+    </div>
+
+            <div class="input-row">
+                <input type="text" placeholder="Full name*">
+                <input type="email" placeholder="Email*">
+            </div>
+
+            <div class="input-row">
+                <input type="tel" placeholder="Phone Number*">
+
+                <select required>
+    <option value="" disabled selected hidden>Select Subject*</option>
+    <option value="general">General INQUIRY</option>
+    <option value="job">Job Application</option>
+    <option value="media">Media & Press</option>
+</select>
+            </div>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">
+                    I agree to all terms & conditions
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">SEND</button>
+        </form>
+                
+    </div>
+</section>
+<a href="index.html" class="home-link">HOMEPAGE</a>
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col">
+            <h4>ABOUT</h4>
+            <a href="#">Women</a>
+            <a href="#">Collections</a>
+            <a href="#">Editorial</a>
+            <a href="#">Stories</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>HELP</h4>
+            <a href="#">Payment Notification</a>
+            <a href="#">Customer Service</a>
+            <a href="#">FAQ</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>SOCIAL</h4>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>LEGAL</h4>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookies Policy</a>
+        </div>
+
+        <div class="footer-col newsletter">
+            <h4>NEWSLETTER</h4>
+            <div class="newsletter-box">
+                <input type="email" placeholder="Enter your email">
+                <button>SUBSCRIBE</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+    <div class="footer-left">
+        © PLAIMANAS
+    </div>
+    <div class="footer-right">
+        Web by Punnawee Hengsomboon
+    </div>
+</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
