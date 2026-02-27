@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<title>Projects</title>
+
+<style>
+    html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: #2F4F4F;
+    color: #EEE8AA;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 80px auto;
+    
+}
+
+h1 {
+    font-size: 90px;
+    margin-bottom: 60px;
+}
+
+.project {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    padding-bottom: 60px;
+    gap: 60px;
+}
+.project:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(238,232,170,0.6),
+        transparent
+    );
+}
+.project-text {
+    flex: 1;
+}
+
+.project-text h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.project-text p {
+    font-size: 24px;
+    line-height: 1.7;
+}
+
+.project img {
+    width: 100%;
+    max-width: 500px; /* คุมไม่ให้ใหญ่เกิน */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    transition: transform 0.4s ease;
+}
+.project img:hover {
+    transform: scale(1.05);
+}
+    /* ===== Curtain Drop ===== */
+body {
+    overflow: hidden;
+    animation: enableScroll 2s forwards;
+}
+
+@keyframes enableScroll {
+    to { overflow: auto; }
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #EEE8AA;
+    z-index: 9999;
+    animation: curtainDrop 1.5s ease forwards;
+}
+
+@keyframes curtainDrop {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100%); }
+}
+
+/* ===== Fade In Title ===== */
+h1 {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+    animation-delay: 1.2s;
+}
+
+/* ===== Fade In Projects ทีละอัน ===== */
+.project {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.project:nth-of-type(1) {
+    animation-delay: 1.6s;
+}
+
+.project:nth-of-type(2) {
+    animation-delay: 2s;
+}
+    .project:nth-of-type(3) {
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    /* Sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 120px;
+    height: 100vh;
+    border-right: 2px solid #EEE8AA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Home text */
+.sidebar a {
+    writing-mode: vertical-rl; /* ตัวอักษรแนวตั้ง */
+    transform: rotate(180deg);
+    text-decoration: none;
+    color: #EEE8AA;
+    font-size: 40px;
+    letter-spacing: 4px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    opacity: 0.6;
+}
+
+/* ดันเนื้อหาให้ไม่ทับ sidebar */
+
+    .project-text small {
+    display: inline-block;
+    margin: 10px 0 15px 0;
+    font-size: 16px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+    .tech-stack {
+    margin: 10px 0 15px 0;
+}
+
+.tech-stack span {
+    display: inline-block;
+    padding: 6px 14px;
+    margin: 5px 8px 5px 0;
+    border: 1px solid rgba(238,232,170,0.6);
+    border-radius: 999px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background: rgba(238, 232, 170, 0.08);
+    transition: all 0.25s ease;
+     backdrop-filter: blur(6px);
+}
+
+.tech-stack span:hover {
+    background-color: #EEE8AA;
+    color: #2F4F4F;
+    transform: translateY(-3px);
+}
+    
+    /* =========================
+   📱 Mobile Responsive
+========================= */
+@media (max-width: 768px) {
+
+    /* ===== เปลี่ยน Sidebar ไปด้านบน ===== */
+    .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    border-right: none;
+    border-bottom: 2px solid #EEE8AA;
+    background: rgba(47,79,79,0.95);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+    z-index: 2000;
+}
+
+.sidebar.hide {
+    transform: translateY(-100%);
+}
+
+    .sidebar a {
+        writing-mode: horizontal-tb;
+        transform: none;
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    /* ===== เอา margin-left ออก ===== */
+    .container {
+        margin-left: 160px;
+    margin: 120px auto 0 auto;
+    width: 90%;
+}
+
+    /* ===== Project เรียงลง ===== */
+    .project {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    align-items: center; 
+}
+
+    /* ===== ลดขนาดหัวข้อ ===== */
+    h1 {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+
+    .project-text h2 {
+        font-size: 26px;
+    }
+
+    .project-text p {
+        font-size: 18px;
+    }
+
+    /* ===== รูปเต็มความกว้าง ===== */
+    .project img {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="sidebar">
+    <a href="home.php">Home</a>
+</div>
+<div class="container">
+
+    <h1>Projects</h1>
+
+    <!-- Project 1 -->
+    <div class="project">
+        <div class="project-text">
+            <h2>Cooperative Education Tracking System</h2>
+                        <div class="tech-stack">
+    	     <span>PHP</span>
+   			 <span>MySQL</span>
+   			 <span>JavaScript</span>
+   			 <span>AJAX</span>
+   			 <span>Bootstrap</span>
+</div>
+            <p>
+A full-stack web application developed with PHP, MySQL, and JavaScript 
+to manage cooperative education workflows. The system includes student 
+registration, company approval management, advisor-student matching, 
+document status tracking (before, during, and after internship), 
+real-time updates using AJAX, search & filter with pagination, 
+and role-based access control for professors and administrators.
+</p> 
+
+        </div>
+         <a href="https://github.com/punnawee-h/coop-docs" target="_blank">
+        <img src="images/coop.jpg" alt="Project 1">
+             </a>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project">
+        <div class="project-text">
+            <h2>Frontend Developer — Practical Test Assignment</h2>
+                         <div class="tech-stack">
+    		<span>HTML</span>
+    		<span>CSS</span>
+    		<span>JavaScript</span>
+			</div>
+           <p>
+A responsive front-end implementation built from a provided Figma design. 
+This project demonstrates strong fundamentals in HTML, CSS, and JavaScript, 
+including pixel-perfect layout accuracy, responsive design principles, 
+clean semantic structure, and cross-device compatibility.
+</p>
+            
+
+        </div>
+        <a href="https://punnawee.rf.gd/TestAssignment.html#" target="_blank">
+        <img src="images/frontendtest.png" alt="Project 2">
+            </a>
+    </div>
+    
+    
+    
+   <!-- Project 3 -->
+<div class="project">
+    <div class="project-text">
+        <h2>E-Commerce Website — Custom WordPress & WooCommerce Development</h2>
+                <div class="tech-stack">
+            <span>WordPress</span>
+			<span>WooCommerce</span>
+            <span>PHP</span>
+   			<span>HTML</span>
+  			<span>CSS</span>
+   			<span>JavaScript</span>
+</div>
+        <small> Under development </small>
+
+        <p>
+A custom WordPress and WooCommerce e-commerce website featuring 
+theme customization, dynamic product management, cart and checkout integration, 
+responsive UI design, and performance-focused front-end optimization 
+for a seamless user shopping experience across desktop and mobile devices.
+</p>
+
+    </div>
+    <a href="https://punnaweeh.rf.gd/?i=1" target="_blank">
+        <img src="images/ecom.png" alt="Project 3">
+    </a>
+</div>
+    
+    
+
+    
+
+</div>
+
+    <script>
+let lastScroll = 0;
+const sidebar = document.querySelector(".sidebar");
+
+window.addEventListener("scroll", () => {
+
+    if (window.innerWidth > 768) return; // ทำเฉพาะมือถือ
+
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+        sidebar.classList.add("hide"); // เลื่อนลง
+    } else {
+        sidebar.classList.remove("hide"); // เลื่อนขึ้น
+    }
+
+    lastScroll = currentScroll;
+});
+</script>
+    
+</body>
+</html>
